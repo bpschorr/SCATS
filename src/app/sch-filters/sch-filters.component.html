@@ -1,0 +1,30 @@
+<div class="col-md-12">
+  <div class="col-ms-2">
+    <button type="button" class="thin-curved-bordered-button" (click)="op.toggle($event)">+ Filters</button>
+  </div>
+</div>
+
+<!-- chips -->
+
+<div class="f-chips-container col-md-12">
+  <div class="f-chips" *ngFor="let c of criteriaList">
+      <span class="chip chipLabel" *ngIf="c.value">{{ c.field }}</span>
+      <span class="chip chipValue">{{ c.value }}
+        <span class="fas fa-times" (click)="removeFilter(c.field)" aria-hidden="true"></span>
+      </span>
+  </div>
+  <button *ngIf="criteriaList.length>0" type="button" class="thin-curved-bordered-button" (click)="emitFilters()">Search</button>
+</div>
+
+<!-- overlay panel -->
+
+<p-overlayPanel #op (onHide)="applyFilters()">
+  <div class="overlay-panel">
+    <div class="overlay-left">
+      <label class="filter-label" *ngFor="let field of tableFields" [ngClass]="{ 'active': selectedFilterSection === field }" (click)="showInput(field)">{{ field }}</label>
+    </div>
+    <div class="overlay-right">
+      <input type="text" class="input-textbox" [(ngModel)]="inputText" (focusout)="updateFilters(selectedFilterSection)"/>
+    </div>
+  </div>
+</p-overlayPanel>

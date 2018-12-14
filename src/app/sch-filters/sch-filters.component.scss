@@ -1,0 +1,85 @@
+$light-color: #f5f7f8;
+
+/* Containers */
+.overlay-panel {
+    display: flex;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+.overlay-left {
+    flex: 1;
+    width: 260px;
+    border-right: solid;
+    border-color: #b9b9b9;
+    border-width: 1px;
+}
+.overlay-right {
+    flex: 1;
+    width: 260px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* Conditional Classes */
+.active {
+    background: $light-color;
+}
+/* Labels */
+.overlay-left label{
+    font-family: inherit;
+    color: #333333;
+    line-height: 25px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+.filter-label {
+    display: block;
+    line-height: 18px;
+}
+.filter-label:hover {
+    background: $light-color;
+}
+/* Inputs */
+.input-textbox{
+    width: 95%;
+    margin: 0 auto;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 5px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+.ui-inputtext.ng-dirty.ng-invalid {
+    border: 1px solid #eee;
+    border-left: 3px solid;
+    border-radius: 5px;
+    border-left-color: #C94C47;
+}
+/* Chips */
+.f-chips-container {
+    margin-bottom: 10px;
+}
+.f-chips {
+    display: inline;
+    margin: 5px 2px;
+    line-height: 3.5;
+}
+.chip {
+    border: 1px solid $light-color;
+    letter-spacing: 0;
+    padding: 5px 5px;
+}
+.chipLabel{
+    background: $light-color;
+    border-radius: 83px 0 0 83px;
+    color: #333333;
+}
+.chipValue{
+    background: #FFFFFF;
+    border-radius: 0 19px 19px 0;
+    color: #666666;
+    line-height: 20px;
+}

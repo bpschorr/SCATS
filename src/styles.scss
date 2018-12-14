@@ -1,0 +1,36 @@
+body {
+    font-family: "Helvetica Neue", "Arial",  sans-serif;
+    font-weight: 100;
+    font-variant-ligatures: normal;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+/* Buttons */
+.thin-curved-bordered-button {
+    color: #607d8b;
+    line-height: 14px;
+    background: rgba(255,255,255,0);
+    border: 1px solid #607d8b;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.thin-curved-bordered-button:hover {
+    background: #dfe5e8;
+}
+.thin-curved-bordered-button:active {
+    background: #607d8b;
+    color: #ffffff;
+}
+/* Overlay Panel */
+.ui-overlaypanel .ui-overlaypanel-content {
+    padding: 0px;
+}
+.ui-overlaypanel {
+    border-radius: 5px;
+    border: 1px;
+}
+/* Font Awesome Icons */
+span.fas.fa-times {
+    font-size: 12px;
+}

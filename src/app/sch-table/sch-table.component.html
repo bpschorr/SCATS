@@ -1,0 +1,12 @@
+<app-sch-filters [tableFields]="tableFields" (emitFilterEvent)="receiveFilters($event)"></app-sch-filters>
+
+<button type="button" id="addToFilter" class="thin-curved-bordered-button add-filter" (click)="addToFilter()" tabIndex="0" (focusout)="removeTooltip()"><i class="fas fa-filter" aria-hidden="true"></i></button>
+
+<div id="main-tbl" class="container-fluid">
+  <div class="table-row header">
+    <div class="field" *ngFor="let field of tableFields">{{ field | titleCase }}</div>
+  </div>
+  <div class="table-row" *ngFor="let row of tableData">
+    <div class="row" *ngFor="let field of tableFields" [attr.data-index]="field">{{ row[field] }}</div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+/* Declare variables */
+$col-width: 100px;
+$medium-color: #dfe5e8;
+
+/* Containers */
+.table-row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    padding: 5px 15px 5px 15px;
+    border-bottom: 1px solid $medium-color;
+    border-collapse: collapse;
+}
+    
+.table-row.header {
+    background-color: $medium-color;
+    font-weight: bold;
+    color: #607d8b;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.field, .row {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+    min-width: $col-width;
+}
+
+/* buttons */
+.add-filter {
+    display: none;
+    border-radius: 5px;
+}
